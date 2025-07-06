@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+✅ Keenify Todo App
+A simple, modern, minimalistic To-Do App built with Next.js (App Router), Supabase, and Vercel.
 
-First, run the development server:
+It allows user-specific authentication and CRUD operations (Create, Read, Delete) on todos with clean UI and live deployment.
 
-```bash
+🚀 Live Demo
+Click Here to View the Live App
+(Replace with your actual Vercel deployment URL)
+
+💻 Tech Stack
+Frontend: Next.js (App Router, React)
+
+Backend: Supabase (Authentication & Database)
+
+Hosting: Vercel
+
+Language: JavaScript
+
+Database: Supabase PostgreSQL (with Row Level Security)
+
+🛠️ How to Run the App
+▶️ Run Locally
+Clone the Repository
+
+bash
+Copy
+Edit
+git clone https://github.com/sadad54/keenify-todo
+cd keenify-todo
+Install Dependencies
+
+bash
+Copy
+Edit
+npm install
+Set Up Environment Variables
+Create a file named .env.local in the root directory and add:
+
+bash
+Copy
+Edit
+NEXT_PUBLIC_SUPABASE_URL=https://your-supabase-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+Start the App
+
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The app will run at http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🌐 Run the Live App
+Go to the deployed Vercel URL:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+arduino
+Copy
+Edit
+https://keenify-todo-your-vercel-url.vercel.app
+(Replace with your actual Vercel deployment link)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You can directly sign up, log in, and use the app without running it locally.
 
-## Learn More
+✨ Features Implemented
+✅ User Authentication (Signup/Login) with Supabase
 
-To learn more about Next.js, take a look at the following resources:
+✅ User-specific Todos (only logged-in users can see their own list)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✅ Create Todos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+✅ View Todos
 
-## Deploy on Vercel
+✅ Delete Todos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✅ Responsive, modern, and minimalistic UI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+✅ Live deployment on Vercel
+
+🔮 Suggested Future Features
+📅 1. Google Calendar Integration
+Allow users to set a due date and time for each to-do item.
+
+Automatically sync the to-do with the Google Calendar API so users get Google Calendar reminders.
+
+📧 2. Gmail or Telegram API Notifications
+Send email or Telegram bot notifications when a deadline is near.
+
+Use the Gmail API or Telegram Bot API to push real-time alerts.
+
+🤖 3. Auto-Prioritization of Todos
+Implement a smart algorithm to auto-prioritize tasks based on deadlines, importance, or urgency.
+
+Example: Overdue or high-priority tasks automatically move to the top of the list.
+
+⏳ 4. Due Date & Countdown Timers
+Display live countdown timers next to each to-do item.
+
+👥 5. Share To-Do Lists
+Allow users to share their to-do lists with others using email invitations or a public link.
+
+🏷️ 6. Tags and Categories
+Allow users to organize their tasks with tags or categories (e.g., Work, Personal, Urgent).
+
+📂 Folder Structure
+bash
+Copy
+Edit
+keenify-todo/
+├── lib/
+│   └── supabaseClient.js
+├── src/
+│   └── app/
+│       ├── layout.js
+│       ├── page.js            # Login/Signup Page
+│       └── dashboard/
+│           └── page.js        # Dashboard Page
+├── .env.local
+├── .gitignore
+├── package.json
+├── README.md
+└── ...
+✅ Project Status
+✔️ Core functionality is complete and fully deployed.
+✔️ Clean commit history and structured code.
+✔️ Ready for future feature expansions.
+
+👤 Author
+Adnan Mashrur Sadad
+GitHub Profile
+(https://github.com/sadad54)
