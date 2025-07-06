@@ -56,7 +56,7 @@ Go to the deployed Vercel URL:
 arduino
 Copy
 Edit
-https://keenify-todo-your-vercel-url.vercel.app
+https://keenify-todo-final.vercel.app
 (Replace with your actual Vercel deployment link)
 
 You can directly sign up, log in, and use the app without running it locally.
