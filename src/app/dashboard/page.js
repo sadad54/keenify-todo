@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { supabase } from '../../../lib/supabaseClient'
+import { supabase } from '../../lib/supabaseClient'
 
 export default function Dashboard() {
     const [todos, setTodos] = useState([])
@@ -98,6 +98,7 @@ const styles = {
         backgroundColor: '#f9f9f9',
         fontFamily: 'Arial, sans-serif',
         padding: '20px',
+        color: "black"
     },
     title: {
         fontSize: '2.5rem',
@@ -115,6 +116,7 @@ const styles = {
         border: '1px solid #ddd',
         fontSize: '1rem',
         minWidth: '250px',
+        color: "black"
     },
     addButton: {
         padding: '12px 20px',

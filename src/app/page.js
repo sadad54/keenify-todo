@@ -3,7 +3,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { supabase } from '../../lib/supabaseClient'
+import { supabase } from '../lib/supabaseClient'
 
 export default function AuthPage() {
     const [email, setEmail] = useState('')
@@ -88,6 +88,7 @@ const styles = {
         padding: '30px',
         borderRadius: '10px',
         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+        color: "black"
     },
     input: {
         padding: '12px',
