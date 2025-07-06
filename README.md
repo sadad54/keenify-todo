@@ -1,3 +1,4 @@
+
 ✅ Keenify Todo App
 A simple, modern, minimalistic To-Do App built with Next.js (App Router), Supabase, and Vercel.
 
@@ -18,13 +19,14 @@ Language: JavaScript
 
 Database: Supabase PostgreSQL (with Row Level Security)
 
-🛠️ How to Run Locally
+🛠️ How to Run the App
+▶️ Run Locally
 Clone the Repository
 
 bash
 Copy
 Edit
-git clone https://github.com/sadad54/keenify-todo.git
+git clone https://github.com/sadad54/keenify-todo
 cd keenify-todo
 Install Dependencies
 
@@ -40,13 +42,24 @@ Copy
 Edit
 NEXT_PUBLIC_SUPABASE_URL=https://your-supabase-project.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
-Run the App Locally
+Start the App
 
 bash
 Copy
 Edit
 npm run dev
-Open http://localhost:3000 in your browser to use the app.
+The app will run at http://localhost:3000
+
+🌐 Run the Live App
+Go to the deployed Vercel URL:
+
+arduino
+Copy
+Edit
+https://keenify-todo-your-vercel-url.vercel.app
+(Replace with your actual Vercel deployment link)
+
+You can directly sign up, log in, and use the app without running it locally.
 
 ✨ Features Implemented
 ✅ User Authentication (Signup/Login) with Supabase
@@ -67,26 +80,26 @@ Open http://localhost:3000 in your browser to use the app.
 📅 1. Google Calendar Integration
 Allow users to set a due date and time for each to-do item.
 
-Automatically sync the to-do with the Google Calendar API so users can get reminders via Google Calendar.
+Automatically sync the to-do with the Google Calendar API so users get Google Calendar reminders.
 
 📧 2. Gmail or Telegram API Notifications
 Send email or Telegram bot notifications when a deadline is near.
 
-Gmail API or Telegram Bot API can push reminders directly to the user.
+Use the Gmail API or Telegram Bot API to push real-time alerts.
 
 🤖 3. Auto-Prioritization of Todos
-Use a smart algorithm to auto-prioritize tasks based on deadlines, importance, or custom weights.
+Implement a smart algorithm to auto-prioritize tasks based on deadlines, importance, or urgency.
 
-Example: Overdue tasks appear at the top automatically.
+Example: Overdue or high-priority tasks automatically move to the top of the list.
 
 ⏳ 4. Due Date & Countdown Timers
-Display a live countdown next to each to-do item indicating how much time is left.
+Display live countdown timers next to each to-do item.
 
-👥 5. Sharing To-Do Lists
-Allow list sharing between multiple users via a unique URL or by adding emails.
+👥 5. Share To-Do Lists
+Allow users to share their to-do lists with others using email invitations or a public link.
 
 🏷️ 6. Tags and Categories
-Let users categorize tasks with tags like “Work”, “Personal”, “Urgent” for better organization.
+Allow users to organize their tasks with tags or categories (e.g., Work, Personal, Urgent).
 
 📂 Folder Structure
 bash
@@ -112,7 +125,6 @@ keenify-todo/
 ✔️ Ready for future feature expansions.
 
 👤 Author
-Your Name
+Adnan Mashrur Sadad
 GitHub Profile
-(Replace with your GitHub URL)
-
+(https://github.com/sadad54)
