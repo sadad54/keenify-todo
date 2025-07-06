@@ -61,29 +61,103 @@ export default function Dashboard() {
     }
 
     return (
-        <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <h1>Your Todo List</h1>
-            <div style={{ marginBottom: '20px' }}>
+        <div style={styles.container}>
+            <h1 style={styles.title}>Your Todo List</h1>
+
+            <div style={styles.todoInputContainer}>
                 <input
                     type="text"
                     placeholder="New todo"
                     value={newTodo}
                     onChange={(e) => setNewTodo(e.target.value)}
-                    style={{ padding: '10px', marginRight: '10px' }}
+                    style={styles.input}
                 />
-                <button onClick={addTodo} style={{ padding: '10px' }}>Add</button>
+                <button onClick={addTodo} style={styles.addButton}>Add</button>
             </div>
 
-            <ul style={{ listStyleType: 'none', padding: 0 }}>
+            <ul style={styles.todoList}>
                 {todos.map((todo) => (
-                    <li key={todo.id} style={{ marginBottom: '10px' }}>
-                        {todo.task}
-                        <button onClick={() => deleteTodo(todo.id)} style={{ marginLeft: '10px' }}>Delete</button>
+                    <li key={todo.id} style={styles.todoItem}>
+                        <span>{todo.task}</span>
+                        <button onClick={() => deleteTodo(todo.id)} style={styles.deleteButton}>Delete</button>
                     </li>
                 ))}
             </ul>
 
-            <button onClick={logout} style={{ marginTop: '20px', padding: '10px' }}>Logout</button>
+            <button onClick={logout} style={styles.logoutButton}>Logout</button>
         </div>
     )
+}
+
+const styles = {
+    container: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        minHeight: '100vh',
+        backgroundColor: '#f9f9f9',
+        fontFamily: 'Arial, sans-serif',
+        padding: '20px',
+    },
+    title: {
+        fontSize: '2.5rem',
+        marginBottom: '30px',
+        color: '#333',
+    },
+    todoInputContainer: {
+        display: 'flex',
+        gap: '10px',
+        marginBottom: '20px',
+    },
+    input: {
+        padding: '12px',
+        borderRadius: '8px',
+        border: '1px solid #ddd',
+        fontSize: '1rem',
+        minWidth: '250px',
+    },
+    addButton: {
+        padding: '12px 20px',
+        borderRadius: '8px',
+        border: 'none',
+        backgroundColor: '#4f46e5',
+        color: '#fff',
+        cursor: 'pointer',
+        fontSize: '1rem',
+    },
+    todoList: {
+        listStyleType: 'none',
+        padding: 0,
+        width: '100%',
+        maxWidth: '400px',
+    },
+    todoItem: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '12px',
+        marginBottom: '10px',
+        backgroundColor: '#fff',
+        borderRadius: '8px',
+        boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+    },
+    deleteButton: {
+        padding: '6px 12px',
+        borderRadius: '6px',
+        border: 'none',
+        backgroundColor: '#ef4444',
+        color: '#fff',
+        cursor: 'pointer',
+        fontSize: '0.9rem',
+    },
+    logoutButton: {
+        marginTop: '20px',
+        padding: '10px 20px',
+        borderRadius: '8px',
+        border: 'none',
+        backgroundColor: '#4f46e5',
+        color: '#fff',
+        cursor: 'pointer',
+        fontSize: '1rem',
+    },
 }
