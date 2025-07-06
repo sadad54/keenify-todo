@@ -1,6 +1,9 @@
+// src/app/dashboard/page.js
+"use client"
+
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
-import { supabase } from '../lib/supabaseClient'
+import { useRouter } from 'next/navigation'
+import { supabase } from '../../../lib/supabaseClient'
 
 export default function Dashboard() {
     const [todos, setTodos] = useState([])
@@ -58,26 +61,29 @@ export default function Dashboard() {
     }
 
     return (
-        <div style={{ padding: 20 }}>
+        <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h1>Your Todo List</h1>
-            <input
-                type="text"
-                placeholder="New todo"
-                value={newTodo}
-                onChange={(e) => setNewTodo(e.target.value)}
-            />
-            <button onClick={addTodo}>Add</button>
+            <div style={{ marginBottom: '20px' }}>
+                <input
+                    type="text"
+                    placeholder="New todo"
+                    value={newTodo}
+                    onChange={(e) => setNewTodo(e.target.value)}
+                    style={{ padding: '10px', marginRight: '10px' }}
+                />
+                <button onClick={addTodo} style={{ padding: '10px' }}>Add</button>
+            </div>
 
-            <ul>
+            <ul style={{ listStyleType: 'none', padding: 0 }}>
                 {todos.map((todo) => (
-                    <li key={todo.id}>
+                    <li key={todo.id} style={{ marginBottom: '10px' }}>
                         {todo.task}
-                        <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+                        <button onClick={() => deleteTodo(todo.id)} style={{ marginLeft: '10px' }}>Delete</button>
                     </li>
                 ))}
             </ul>
 
-            <button onClick={logout}>Logout</button>
+            <button onClick={logout} style={{ marginTop: '20px', padding: '10px' }}>Logout</button>
         </div>
     )
 }
